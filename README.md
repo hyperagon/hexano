@@ -8,6 +8,6 @@ A simple hexagonal piano.
 - Replays what was recorded like a piano roll
 
 ### Examples ([emoji from here](https://getemoji.com/#symbols))
-- [Keyboard Cat](https://www.youtube.com/watch?v=J---aiyznGQ) 🔴🟢🟣🟢🔴🟢🟣🟢...
+- [Keyboard Cat](https://www.youtube.com/watch?v=J---aiyznGQ) 🔴🟢🟣🟢🔴🟢🟣🟢... (C-E-G...)
 
 Inspired by [Hexiano](https://github.com/lrq3000/hexiano).
