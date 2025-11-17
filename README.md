@@ -6,6 +6,7 @@ A simple hexagonal piano.
 - Let's you pick different kinds of Wave
 - Records the output into a *WAV* file
 - Replays what was recorded like a piano roll
+- Can Import and Export the melody to a *JSON* file
 
 ### Examples ([emoji from here](https://getemoji.com/#symbols))
 - [Keyboard Cat](https://www.youtube.com/watch?v=J---aiyznGQ) 🔴🟢🟣🟢🔴🟢🟣🟢... (C-E-G...)
