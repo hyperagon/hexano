@@ -1,5 +1,7 @@
 <!--    
-can you create a synthesizer like a VST for the web? Like a gameboy synthesizer.
+can you create a synthesizer like a VST for the web?
+
+like a gameboy synthesizer
 
 can you add a button for instrument selection after Play? Make it a music note. We can pick None or 8-bit and use this code:
 <!DOCTYPE html>
@@ -293,6 +295,7 @@ what's the point of having the wave modes if in 8-bit mode?
 Human Intervention
     - Remove Attack and Release numeric indicators
     - Remove icons from instrument type, they were all thre same
+    - hexboard top:0
 -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -329,7 +332,7 @@ Human Intervention
 
         .hexboard {
             position: absolute;
-            top: 54px;
+            top: 0;
             left: 0;
             right: 0;
             bottom: 0;
@@ -863,9 +866,8 @@ Human Intervention
         }
     </style>
     <script type="text/javascript">
+        var DEBUG = false;
         document.addEventListener('DOMContentLoaded', function() {
-            var DEBUG = false;
-        
             // --- DOM ELEMENTS ---
             var hexboard = document.querySelector('.hexboard');
             var recordButton = document.getElementById('record-button');
@@ -1407,12 +1409,15 @@ Human Intervention
             }
             
             function ensureAudioContextResumed() {
+                if(!audioInitialized) {
+                    tryInitAudioContext();
+                }
+
                 if (!audioContext || !audioInitialized) {
                     console.error("Audio context is not initialized");
-                    return false;
                 }
                 
-                if (audioContext.state === 'suspended') {
+                if (audioContext.state === 'suspended') {S
                     audioContext.resume().then(function() {
                         if(DEBUG) {
                             console.log("Audio context resumed successfully");
@@ -2543,7 +2548,10 @@ Human Intervention
                 playIcon.style.display = 'none';
                 stopIcon.style.display = 'block';
                 
-                console.log(recordedMelody);
+                if(DEBUG) {
+                    console.log("Recorded Melody:");
+                    console.log(recordedMelody);
+                }
 
                 // Ensure audio context is resumed before starting playback
                 if (!ensureAudioContextResumed()) {
