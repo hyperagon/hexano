@@ -11,5 +11,6 @@ A simple hexagonal piano.
 ### Examples ([emoji from here](https://getemoji.com/#symbols))
 - [Keyboard Cat](https://www.youtube.com/watch?v=J---aiyznGQ): 🔴🟢🟣🟢🔴🟢🟣🟢...
 - Hexano : 🔴🟡🟢🔵🟠🟣 🟠🟣🔵🟢🟣🟡
+- Censor: B5 (it's actually 1000Hz but this is the closest)
 
 Inspired by [Hexiano](https://github.com/lrq3000/hexiano).
